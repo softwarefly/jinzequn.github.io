@@ -1,9 +1,11 @@
 ---
 title: 从源码编译TensorFlow
-date: 2017-04-17 13:44:31
+date: 2017-04-18 12:44:21
+type: "categories"
 tags: TensorFlow
+categories: TensorFlow
 toc: True
-author: spadesk
+author: Jzeee
 
 ---
 
