@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Jzeee' Blog
+title: PARADOX
 subtitle:
-description:
-author: Zequn Jin
+description: The world is a paradox
+author: Jin Zequn
 language: zh-Hans
 timezone:
 
@@ -78,5 +78,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: http://github.com/jzeee/jzeee.github.io.git
+  repository: http://github.com/jinzequn/jinzequn.github.io.git
   branch: master
