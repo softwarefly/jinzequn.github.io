@@ -24,7 +24,14 @@ http://docs.nvidia.com/cuda/cuda-installation-guide-linux/#axzz4VZnqTJ2A
 
 https://developer.nvidia.com/cudnn 
 
-cudnn配置的过程简而言之就是把下载好的cudnn复制到cuda库中，下载速度会有限制，自行科学上网。
+从官方网站下载好cuda和cudnn以后用以下命令安装。
+
+    dpkt -i cuda文件名
+    sudo apt update
+    sudo apt install cuda
+
+cudnn配置的过程简而言之就是把下载好的cudnn复制到相应的cuda库中，下载速度会有限制，自行科学上网。因为要复制到`/usr/local/cuda-8.0`中，所以要用命令行给root权限。
+
 
 __注意！ 接下来需要配置环境变量。打开一个终端。__
    
