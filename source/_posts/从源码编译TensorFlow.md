@@ -5,7 +5,6 @@ type: "categories"
 tags: TensorFlow
 categories: TensorFlow
 toc: True
-author: Jzeee
 
 ---
 

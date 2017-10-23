@@ -6,7 +6,6 @@ tags:
   - Super-resolution
 categories: 读论文
 toc: true
-author: Jin Zequn
 
 ---
 这篇论文第一次将GAN（生成式对抗网络）引入图像超分辨率，取得state-of-art的效果，论文的效果值得称赞！
@@ -25,7 +24,7 @@ author: Jin Zequn
 
 在这篇论文中的GAN生成器式这么描述的:`At the core of our very deep generator network G,which is illustrated in Figure are B residual blocks with identical layout. Sepecifically, we use two convolutional layers with small 3x3 kernels and 64 feature maps followed by batch-normalization layers and ReLU as the activation fuction. We increase the resolution of the input image with two trained deconvolution layers.`原文是这样大家也能看得懂，不翻译了,大概就是**残差块+卷积层+BN层+ReLU**，对于GAN的判别器就是**VGG+LeakyReLU+max-pooling**,具体结构如图。
 
-![](the-understand-of-SRGAN/1.png)
+![](the-understand-of-SRGAN/1.jpg)
 
 #### “感知”损失函数
 
@@ -35,13 +34,13 @@ author: Jin Zequn
 
 公式分别如下：
 
-![](the-understand-of-SRGAN/4.png)
+![](the-understand-of-SRGAN/4.jpg)
 
-![](the-understand-of-SRGAN/5.png)
+![](the-understand-of-SRGAN/5.jpg)
 
 组合体公式如下：
 
-![](the-understand-of-SRGAN/6.png)
+![](the-understand-of-SRGAN/6.jpg)
 
 公式背后的数学意义大概就是**MSE+GAN**，每个占一定部分的权重，分别表示空间的相似性、判别器看到的相似性。具体的公式细节大家自行感受一下。
 ### 展望未来
@@ -49,11 +48,11 @@ author: Jin Zequn
 
 在论文后面放出实验结果
 
-![](the-understand-of-SRGAN/3.png)
+![](the-understand-of-SRGAN/3.jpg)
 
 最后
 
-LOVE AND PEACE
+***LOVE AND PEACE***
 
 
 更新：
