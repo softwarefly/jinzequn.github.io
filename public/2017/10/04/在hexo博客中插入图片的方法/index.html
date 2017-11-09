@@ -92,7 +92,7 @@
 <meta property="og:description" content="在markdown文件中插入图片是一件巨麻烦无比的事情，特别是在图片很多的情况下，先把图片上传到服务器，再把图片的链接贴在markdown文件中，这个过程可以吃下三个月饼、两个香蕉，经过寻找，终于发现了一个快捷、方便、好的不行的插入图片方法，直接在本地添加。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2017/10/04/在hexo博客中插入图片的方法/1.jpg">
-<meta property="og:updated_time" content="2017-10-23T02:17:11.396Z">
+<meta property="og:updated_time" content="2017-11-09T06:57:31.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在hexo博客中插入图片的方法">
 <meta name="twitter:description" content="在markdown文件中插入图片是一件巨麻烦无比的事情，特别是在图片很多的情况下，先把图片上传到服务器，再把图片的链接贴在markdown文件中，这个过程可以吃下三个月饼、两个香蕉，经过寻找，终于发现了一个快捷、方便、好的不行的插入图片方法，直接在本地添加。">
@@ -351,9 +351,9 @@
         <p>  在markdown文件中插入图片是一件巨麻烦无比的事情，特别是在图片很多的情况下，先把图片上传到服务器，再把图片的链接贴在markdown文件中，这个过程可以吃下三个月饼、两个香蕉，经过寻找，终于发现了一个快捷、方便、好的不行的插入图片方法，直接在本地添加。</p>
 <a id="more"></a>
 <p>1.首先在站点目录下的<code>_config.yml</code>中是否存在<code>post_asset_folder:</code>这句话，把冒号之后的<code>false</code>改为<code>true</code>，hexo默认的参数是<code>false</code>。</p>
-<p>2.在blog文件夹下执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</div></pre></td></tr></table></figure></p>
+<p>2.在blog文件夹下执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure></p>
 <p>默默的等它跑完。</p>
-<p>3.接下来就可以正常的开始新建一个文章：<code>hexo new 文章名字</code>,你发现在    <code>/source/_posts/</code> 目录下会出现一个新的md文件和一个同名的文件夹，图片就可以放在这个文件夹的下面。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">/name</div><div class="line">    1.jpg</div><div class="line">    2.jpg</div><div class="line">    3.jpg</div><div class="line">name.md</div></pre></td></tr></table></figure></p>
+<p>3.接下来就可以正常的开始新建一个文章：<code>hexo new 文章名字</code>,你发现在    <code>/source/_posts/</code> 目录下会出现一个新的md文件和一个同名的文件夹，图片就可以放在这个文件夹的下面。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/name</span><br><span class="line">    1.jpg</span><br><span class="line">    2.jpg</span><br><span class="line">    3.jpg</span><br><span class="line">name.md</span><br></pre></td></tr></table></figure></p>
 <p>4.在文章中只要使用<code>![logo](name/1.jpg)</code>既可以插入图片，[]中的logo是图片的名字。</p>
 <p>这样做的好处是方便，不好的地方是图片<strong>真的很占地方</strong>，所以酌情使用。</p>
 <p>插一张图片试试效果</p>
@@ -501,7 +501,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
