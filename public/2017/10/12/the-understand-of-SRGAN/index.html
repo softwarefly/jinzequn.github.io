@@ -87,20 +87,20 @@
 <meta name="keywords" content="paper,Super-resolution">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【读论文】SRGAN">
-<meta property="og:url" content="http://yoursite.com/2017/10/12/the-understand-of-SRGAN/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/10/12/The-understand-of-SRGAN/index.html">
 <meta property="og:site_name" content="Zorion&#39;s Blog">
 <meta property="og:description" content="这篇论文第一次将GAN（生成式对抗网络）引入图像超分辨率，取得state-of-art的效果，论文的效果值得称赞！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2017/10/12/the-understand-of-SRGAN/1.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/12/the-understand-of-SRGAN/4.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/12/the-understand-of-SRGAN/5.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/12/the-understand-of-SRGAN/6.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/12/the-understand-of-SRGAN/3.jpg">
-<meta property="og:updated_time" content="2017-10-23T02:16:27.484Z">
+<meta property="og:image" content="http://yoursite.com/2017/10/12/The-understand-of-SRGAN/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/10/12/The-understand-of-SRGAN/4.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/10/12/The-understand-of-SRGAN/5.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/10/12/The-understand-of-SRGAN/6.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/10/12/The-understand-of-SRGAN/3.jpg">
+<meta property="og:updated_time" content="2017-11-12T03:30:30.295Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【读论文】SRGAN">
 <meta name="twitter:description" content="这篇论文第一次将GAN（生成式对抗网络）引入图像超分辨率，取得state-of-art的效果，论文的效果值得称赞！">
-<meta name="twitter:image" content="http://yoursite.com/2017/10/12/the-understand-of-SRGAN/1.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2017/10/12/The-understand-of-SRGAN/1.jpg">
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/12/the-understand-of-SRGAN/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/12/The-understand-of-SRGAN/"/>
 
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/12/the-understand-of-SRGAN/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/12/The-understand-of-SRGAN/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zorion Jin">
@@ -359,21 +359,21 @@
 <h3 id="主要贡献"><a href="#主要贡献" class="headerlink" title="主要贡献"></a>主要贡献</h3><p>论文刚开始不出所料的对各路大神在超分辨率的工作进行无情嘲讽，就按下不表了，主要说说贡献。这边文章最大的贡献是将生成式对抗网络应用于图像超分辨率，让判别器分辨生成的图像和真实的图像，这样就能达到photo-realistic的效果，这个想法不错，然后设计了一个新的损失函数进行判别我们接下来会详细的说明一下。</p>
 <h4 id="对抗式生成网络结构"><a href="#对抗式生成网络结构" class="headerlink" title="对抗式生成网络结构"></a>对抗式生成网络结构</h4><p>生成式对抗网络我们就不详细说了，感兴趣的同学们可以去看下一以Goodfellow为首的众大神的一系列文章</p>
 <p>在这篇论文中的GAN生成器式这么描述的:<code>At the core of our very deep generator network G,which is illustrated in Figure are B residual blocks with identical layout. Sepecifically, we use two convolutional layers with small 3x3 kernels and 64 feature maps followed by batch-normalization layers and ReLU as the activation fuction. We increase the resolution of the input image with two trained deconvolution layers.</code>原文是这样大家也能看得懂，不翻译了,大概就是<strong>残差块+卷积层+BN层+ReLU</strong>，对于GAN的判别器就是<strong>VGG+LeakyReLU+max-pooling</strong>,具体结构如图。</p>
-<p><img src="/2017/10/12/the-understand-of-SRGAN/1.jpg" alt=""></p>
+<p><img src="/2017/10/12/The-understand-of-SRGAN/1.jpg" alt=""></p>
 <h4 id="“感知”损失函数"><a href="#“感知”损失函数" class="headerlink" title="“感知”损失函数"></a>“感知”损失函数</h4><p>感知损失函数的也是本文巨大创新点之一，大概就是不从像素层面判断生成图像的质量好不好，而是从观感的角度来判别，由判别器来判别。感知函数由两个部分组成：</p>
 <ol>
 <li>Content Loss</li>
 <li>Adversarial Loss</li>
 </ol>
 <p>公式分别如下：</p>
-<p><img src="/2017/10/12/the-understand-of-SRGAN/4.jpg" alt=""></p>
-<p><img src="/2017/10/12/the-understand-of-SRGAN/5.jpg" alt=""></p>
+<p><img src="/2017/10/12/The-understand-of-SRGAN/4.jpg" alt=""></p>
+<p><img src="/2017/10/12/The-understand-of-SRGAN/5.jpg" alt=""></p>
 <p>组合体公式如下：</p>
-<p><img src="/2017/10/12/the-understand-of-SRGAN/6.jpg" alt=""></p>
+<p><img src="/2017/10/12/The-understand-of-SRGAN/6.jpg" alt=""></p>
 <p>公式背后的数学意义大概就是<strong>MSE+GAN</strong>，每个占一定部分的权重，分别表示空间的相似性、判别器看到的相似性。具体的公式细节大家自行感受一下。</p>
 <h3 id="展望未来"><a href="#展望未来" class="headerlink" title="展望未来"></a>展望未来</h3><p>当然，论文最后展望了一下未来，认为PSNR并不能代表生成图像的质量（毕竟这篇文章的得分不是很高[坏笑]），我们要找一个更好的衡量方法！但是从实验结果来看，确实这样，人的感官不能单靠信噪比来表示，数学意义上的相似并不代表感官上的相似。我们还要把网络做的更深你怕不怕，我们还要找更好的损失函数你怕不怕。</p>
 <p>在论文后面放出实验结果</p>
-<p><img src="/2017/10/12/the-understand-of-SRGAN/3.jpg" alt=""></p>
+<p><img src="/2017/10/12/The-understand-of-SRGAN/3.jpg" alt=""></p>
 <p>最后</p>
 <p><strong><em>LOVE AND PEACE</em></strong></p>
 <p>更新：<br><a href="https://arxiv.org/abs/1609.04802" target="_blank" rel="external">https://arxiv.org/abs/1609.04802</a> 论文地址，我写完才发现这篇论文在2017年5月又提交了一版，删除了正则化的损失函数，其实本来正则化的系数就很小，我把正文也修改了，Twitter你这个善变的社交网站。</p>
