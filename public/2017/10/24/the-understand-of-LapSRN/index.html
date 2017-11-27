@@ -92,11 +92,11 @@
 <meta property="og:description" content="这篇论文只强调一个事儿，我这个超分辨率又快又好！">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2017/10/24/the-understand-of-LapSRN/1.gif">
-<meta property="og:image" content="http://yoursite.com/2017/10/24/the-understand-of-LapSRN/2.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/24/the-understand-of-LapSRN/3.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/24/the-understand-of-LapSRN/4.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/24/the-understand-of-LapSRN/5.jpg">
-<meta property="og:updated_time" content="2017-11-26T08:22:59.750Z">
+<meta property="og:image" content="http://yoursite.com/2017/10/24/the-understand-of-LapSRN/2.JPG">
+<meta property="og:image" content="http://yoursite.com/2017/10/24/the-understand-of-LapSRN/3.JPG">
+<meta property="og:image" content="http://yoursite.com/2017/10/24/the-understand-of-LapSRN/4.JPG">
+<meta property="og:image" content="http://yoursite.com/2017/10/24/the-understand-of-LapSRN/5.JPG">
+<meta property="og:updated_time" content="2017-11-26T10:00:46.645Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【读论文】LapSRN">
 <meta name="twitter:description" content="这篇论文只强调一个事儿，我这个超分辨率又快又好！">
@@ -367,7 +367,7 @@
 </ol>
 <h2 id="详细来说"><a href="#详细来说" class="headerlink" title="详细来说"></a>详细来说</h2><p>接下来我们将从网络结构、参数共享、损失函数、多尺度模型和网络训练这几部分进行介绍。</p>
 <h3 id="神经网络模型结构"><a href="#神经网络模型结构" class="headerlink" title="神经网络模型结构"></a>神经网络模型结构</h3><p>我们的模型建立在拉普拉斯金字塔结构的基础上，输入为低分辨率图像，而不是插值填充后的图像。模型由两个部分组成，特征提取和图像重建。</p>
-<p><img src="/2017/10/24/the-understand-of-LapSRN/2.jpg" alt=""></p>
+<p><img src="/2017/10/24/the-understand-of-LapSRN/2.JPG" alt=""></p>
 <p>上图中（a）是首先进行上采样，然后进行卷积等操作，（b）首先进行一系列操作提取特征，然后再进行上采样，（c）是我们论文提出的方案，红线是卷积层，蓝线是上采样层，绿色是Element-wise层，所以我们的模型由两个分支组成，同步进行。</p>
 <ol>
 <li><strong>特征提取分支</strong>：通过卷积等建立非线性映射，然后上采样得到图。</li>
@@ -375,15 +375,15 @@
 </ol>
 <p>和LAPGAN不同的点是:我们的图是上采样后直接传下来，LAPGAN是上采样再经过卷积以后再传下来。至于为什么这样做，原文的话是这样的：<code>Our network design effectively alleviates the computational cost and increases the size of receptive fields</code>,大概意思是减少了计算量并增加了感受野，我是没能理解这其中的道理。</p>
 <h3 id="参数共享"><a href="#参数共享" class="headerlink" title="参数共享"></a>参数共享</h3><p>由于逐级放大过程中每一个放大块的网络结构都是一样的，所以我们共享了feature embedding、上采样、卷积的参数，节省了大量的参数和计算过程。</p>
-<p><img src="/2017/10/24/the-understand-of-LapSRN/3.jpg" alt=""></p>
+<p><img src="/2017/10/24/the-understand-of-LapSRN/3.JPG" alt=""></p>
 <p>上图中是详细的网络结构，每一个放大块都是由feature embedding、上采样（反卷积层）、卷积层组成的，每块的结构相同，参数值很接近，所以我们共享了这部分的参数，也就是每个块的参数都一样。</p>
 <p>为了得到更深的卷积神经网络、避免梯度爆炸的问题，我们还是采用了残差网络，不细说了，大家都一样。</p>
 <h3 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h3><p>我们舍弃了L2和L1这两种损失函数，因为他们都会造成图像过于平滑的问题，我们采用的损失函数是一个很稳定的损失函数 Charbonnier loss function，总体的函数我直接截图了，论文中也并没有提及这个损失函数为什么好用，感兴趣的可以去翻这个损失函数的论文。</p>
-<p><img src="/2017/10/24/the-understand-of-LapSRN/4.jpg" alt=""></p>
+<p><img src="/2017/10/24/the-understand-of-LapSRN/4.JPG" alt=""></p>
 <p>英文部分是公式中参数的解释，很好懂，不翻译了（主要是因为不会在markdown中写公式[捂脸]）。</p>
 <h3 id="多尺度训练"><a href="#多尺度训练" class="headerlink" title="多尺度训练"></a>多尺度训练</h3><p>这里的多尺度在我的理解看来就是用逐级放大，每个都扩大2倍，而不是采用先用插值放大到单尺度的图像再更改图像信息。多尺度是什么意思呢？在我看来就像金字塔一样，逐级放大，放大2倍，4倍，8倍等等，每一个放大倍数就是一个尺度。</p>
 <h2 id="最后谈谈"><a href="#最后谈谈" class="headerlink" title="最后谈谈"></a>最后谈谈</h2><p>接下来就是模型训练参数设置细节什么什么的，不提了。放出结果看看</p>
-<p><img src="/2017/10/24/the-understand-of-LapSRN/5.jpg" alt=""></p>
+<p><img src="/2017/10/24/the-understand-of-LapSRN/5.JPG" alt=""></p>
 <p>看起来还是不错，这只是生成图像的质量，在速度方面还要快很多，由于参数共享的原因，模型参数量大幅下降。其实这篇文章在我看来干货很多，因为<strong>逐级放大</strong>这个事儿跟我的思路很像，我是苦于没有找到合适的方法进行描述，这下知道方法了。还有一个很重要的是<strong>参数共享</strong>，可以看到参数共享节省了大量的参数，模型就会很小。我对参数共享这个保留意见，不知道不共享参数的话会不会好很多。</p>
 <p>总而言之，这是我最近读到的最复杂的一篇论文，复杂的结构让我很安心，太简单了总觉得不靠谱，可能这是病吧。</p>
 <p>最后还是</p>
@@ -459,8 +459,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/26/test/" rel="prev" title="test">
-                test <i class="fa fa-chevron-right"></i>
+              <a href="/2017/11/24/Talk-about-CNN/" rel="prev" title="漫谈卷积神经网络">
+                漫谈卷积神经网络 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -562,7 +562,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -576,7 +576,7 @@
             
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/jzeee" target="_blank" title="GitHub">
+                  <a href="https://github.com/jinzequn" target="_blank" title="GitHub">
                     
                       <i class="fa fa-fw fa-github"></i>GitHub</a>
                 </span>

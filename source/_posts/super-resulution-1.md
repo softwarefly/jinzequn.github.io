@@ -2,7 +2,7 @@
 title: 【图像超分辨率】简介
 date: 2017-10-07 12:28:38
 tags: 
-  - deeplearning
+  - Deep Learning
   - Super-resolution
 categories: 图像超分辨率
 toc: true
