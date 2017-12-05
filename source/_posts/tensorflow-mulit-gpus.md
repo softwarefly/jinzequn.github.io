@@ -6,7 +6,7 @@ categories: TensorFlow
 toc: True
 ---
 
-让TensorFLow飞一会儿
+让TensorFlow飞一会儿
 <!--more-->
 
 面对大型的深度神经网络训练工程，训练的时间非常重要。训练的时间长短依赖于计算处理器也就是GPU，然而单个GPU的计算能力有限，利用多个GPU进行分布式部署，同时完成一个训练任务是一个很好的办法。对于caffe来说，由于NCCL的存在，可以直接在slover中指定使用的GPU。然而对于Tensorflow，虽然Contrib库中有NCCL，但是我并没有找到相关的例子，所以，还是靠双手成就梦想。
@@ -38,7 +38,7 @@ Talk is cheap, show me the code!!
 ### 读入数据
 
 由于是在不同的GPU上进行运算，所以我们采用TF官方的数据格式tfrecords作为输入，tfrecords的MNIST数据集格式可以在网上很轻易的找到。读入数据的时候我们就用标准的tfrecords数据集读入的格式。
-```
+```Python
 def read_and_decode(filename_queue):
     reader = tf.TFRecordReader()
     _, serialized_example = reader.read(filename_queue)
@@ -57,7 +57,7 @@ def read_and_decode(filename_queue):
     return image, label
 ```
 这段函数会返回一个图像和标签，我们需要按照Batch的方式读入
-```
+```Python
 def inputs(train, batch_size, num_epochs):
     if not num_epochs: num_epochs = None
     filename = os.path.join(FLAGS.data_dir,

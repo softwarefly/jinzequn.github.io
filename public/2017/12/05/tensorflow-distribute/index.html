@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="深度神经 人工智障" />
+  <meta name="keywords" content="TensorFlow," />
 
 
 
@@ -83,16 +83,20 @@
 
 
 
-<meta name="description" content="The world is a paradox">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zorion&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/04/index.html">
+<meta name="description" content="让TensorFlow们飞一会儿">
+<meta name="keywords" content="TensorFlow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TensorFlow分布式部署【多机多卡】">
+<meta property="og:url" content="http://yoursite.com/2017/12/05/tensorflow-distribute/index.html">
 <meta property="og:site_name" content="Zorion&#39;s Blog">
-<meta property="og:description" content="The world is a paradox">
+<meta property="og:description" content="让TensorFlow们飞一会儿">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2017/12/05/tensorflow-distribute/1.jpg">
+<meta property="og:updated_time" content="2017-12-05T07:23:35.232Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zorion&#39;s Blog">
-<meta name="twitter:description" content="The world is a paradox">
+<meta name="twitter:title" content="TensorFlow分布式部署【多机多卡】">
+<meta name="twitter:description" content="让TensorFlow们飞一会儿">
+<meta name="twitter:image" content="http://yoursite.com/2017/12/05/tensorflow-distribute/1.jpg">
 
 
 
@@ -122,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/04/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/05/tensorflow-distribute/"/>
 
 
 
 
 
-  <title>归档 | Zorion's Blog</title>
+  <title>TensorFlow分布式部署【多机多卡】 | Zorion's Blog</title>
   
 
 
@@ -147,7 +151,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -241,111 +245,208 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 10 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/18/从源码编译TensorFlow/" itemprop="url">
-              
-                <span itemprop="name">从源码编译TensorFlow</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-18T12:44:21+08:00"
-              content="2017-04-18" >
-          04-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/05/tensorflow-distribute/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zorion Jin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zorion's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/04/16/xu/" itemprop="url">
-              
-                <span itemprop="name">序</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">TensorFlow分布式部署【多机多卡】</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-16T12:00:00+08:00"
-              content="2017-04-16" >
-          04-16
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-05T12:00:00+08:00">
+                2017-12-05
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/TensorFlow/" itemprop="url" rel="index">
+                    <span itemprop="name">TensorFlow</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <p>让TensorFlow们飞一会儿<br><a id="more"></a></p>
+<p>前一篇文章说过了TensorFlow单机多卡情况下的分布式部署，毕竟，一台机器势单力薄，想叫兄弟们一起来算神经网络怎么办？我们这次来介绍一下多机多卡的分布式部署。</p>
+<p>其实多机多卡分布式部署在我看来相较于单机多卡分布式更容易一些，因为一台机器下需要考虑我需要把给每个device分配哪些操作，这个过程很繁琐。多台机器虽然看起来更繁琐，然而我们可以把每一台机器看作是一个单卡的机器，并且谷歌爸爸已经把相对复杂的函数都给封装好了，我们直接拿来用就行。为什么这么说呢？我们首先介绍两个概念<strong>In-graph模式</strong>和<strong>Between-graph模式</strong>：</p>
+<p><strong>In-graph模式</strong>: 这个模式跟单机单卡是差不多的，我们需要把不同的节点分配给不同的设备，比如说我让某台机器的某个GPU做一部分卷积，另外某台机器的某个GPU做另外一部分卷积，这样大家都有活干。想象总是美好的，在实际情况中会出现什么问题呢？数据搬移量太大，会有相当一部分时间耗费再数据搬移之下，Tensor翻山越岭，穿过网线，来到一个设备中，凳子还没坐热，有出发去另外一个设备。在大量训练数据的情况下，这种方法往往是不可取的。</p>
+<p><strong>Between-graph模式</strong>： 这个模式下每一个设备都相当于独立的完成整个卷积神经网络的操作，只是在开始时从参数服务器中取到参数，然后结束的时候送回参数。所以除了chief节点以外，所有人都可以在训练过程中随时退出，随时加入，但是刚开始时，大家都要响应一下chief节点的号召。这样显然更合理一点，在大量数据的情况下我们会选用这个方法，下面的代码也会以Between-graph模式作为例子。</p>
+<p>上文提到在Between-graph模式下我们需要在训练过程中从参数服务器中获取参数，那么问题来了，什么是参数服务器？接下来我们再引入两个概念（忍一下忍一下，很简单）：</p>
+<p><strong>参数服务器</strong>：顾名思义，参数服务器嘛，保存参数用的服务器，简称ps(paramEter severs)。参数服务器可以不止一个，如果参数量过大的话，我们可以多叫几台计算机过来充当参数服务器，用来更新参数。</p>
+<p><strong>工作服务器</strong>： 顾名思义，工作服务器嘛，干活的，简称worker。一般为GPU们，能够进行快速并行计算的设备，它可以从参数服务器中把参数荡下来，然后计算出来以后在传上去。</p>
+<p>基础的介绍完了，同样的每个工作模式下都会有参数同步更新和异步更新，下面放张就是那么个意思的图(现在没图都不好写博客了…)。</p>
+<p><img src="/2017/12/05/tensorflow-distribute/1.jpg" alt=""></p>
+<p>好，总结一下，我们可以设置多个参数服务器(ps)用来存储更新参数，同时我们也可以设置多个工作服务器(worker)用来进行计算。这样就组成了一个多机多卡分布式的Tensorflow开发环境。</p>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的支持将鼓励我继续创作</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Zorion Jin 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Zorion Jin 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/TensorFlow/" rel="tag"># TensorFlow</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/01/tensorflow-mulit-gpus/" rel="next" title="TensorFlow分布式部署【单机多卡】">
+                <i class="fa fa-chevron-left"></i> TensorFlow分布式部署【单机多卡】
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -353,6 +454,8 @@
 
 
           
+  
+
 
         </div>
         
@@ -585,6 +688,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
