@@ -3,7 +3,7 @@ title: 我们随便谈谈[17.12.05]
 date: 2017-12-05 20:00:00
 tags: 随笔
 categories: 随笔
-toc： True
+toc: True
 
 ---
 二零一七年十二月二十五日，我们随便谈谈。
