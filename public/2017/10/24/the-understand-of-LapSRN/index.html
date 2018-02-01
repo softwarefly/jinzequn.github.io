@@ -96,7 +96,7 @@
 <meta property="og:image" content="http://yoursite.com/2017/10/24/the-understand-of-LapSRN/3.JPG">
 <meta property="og:image" content="http://yoursite.com/2017/10/24/the-understand-of-LapSRN/4.JPG">
 <meta property="og:image" content="http://yoursite.com/2017/10/24/the-understand-of-LapSRN/5.JPG">
-<meta property="og:updated_time" content="2018-01-28T05:44:22.905Z">
+<meta property="og:updated_time" content="2017-11-26T10:00:46.645Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【读论文】LapSRN">
 <meta name="twitter:description" content="这篇论文只强调一个事儿，我这个超分辨率又快又好！">
@@ -355,7 +355,7 @@
         <p>这篇论文只强调一个事儿，我这个超分辨率又快又好！</p>
 <a id="more"></a>
 <p>论文全文名称为《Fast and Accurate Image Super-Resolution with Deep Laplacian Pyramid Networks》，翻译过来就是<strong>基于深度拉普拉斯金字塔网络又快又好的图像超分辨率</strong>，emmmmmm…，这论文名字还是挺勇敢。我们后文中简称它为<strong>LapSRN</strong>。</p>
-<p>贴出来它的网站（对，它有一个主页）：<a href="http://vllab.ucmerced.edu/wlai24/LapSRN/" target="_blank" rel="noopener">http://vllab.ucmerced.edu/wlai24/LapSRN/</a></p>
+<p>贴出来它的网站（对，它有一个主页）：<a href="http://vllab.ucmerced.edu/wlai24/LapSRN/" target="_blank" rel="external">http://vllab.ucmerced.edu/wlai24/LapSRN/</a></p>
 <p><img src="/2017/10/24/the-understand-of-LapSRN/1.gif" alt=""></p>
 <p>竟然还拿我赫敏做例子（不要翻，这是一个GIF），这篇论文不看是不行了。（但是不应该是倍数越大越清晰么。。）</p>
 <p>冷静，冷静一下。这篇论文怎么个不一样呢？我们来看一下摘要部分，现有的卷积神经网络需要大量的参数以及巨大的计算量来生成产分辨率结果，根本做不到实时。在这篇论文中，我们提出了一种深度拉式金字塔模型的超分辨神经网络，从而达到了一个又快又好的结果。从多层金字塔结构中对超分辨进行重建，取代了以前的神经网络首先将低分辨率图像插值放大然后再进行生成的方法。我们用了一个叫做 robust Charbonnier 的损失函数（百度、Bing对于这个损失函数只甩出了它的论文，一点介绍都木有）。然后我们在金字塔层之间的递归层中共享了一部分参数，因此减少了参数量。在测试数据集中与state-of-art的不相上下的结果，但是！我们快。</p>
@@ -540,7 +540,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
